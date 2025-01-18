@@ -1,84 +1,89 @@
 .navbar {
-    position: fixed;
-    top: 10px;
-    background-color: #c6c2c2;
-    height: 100vh;
-    width: 80px;
-    padding: 0.1rem;
-    transition: width 0.3s ease;
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: white;
+  height: 100vh;
+  width: 50px; /* Initially collapsed */
+  padding: 0.5rem;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.navbar:hover {
+  width: 250px; /* Expands on hover */
+}
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between icon and text */
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.navbar ul li img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  white-space: nowrap;
+  overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(0); /* Slide in animation */
+}
+
+.navbar:hover ul li a {
+  opacity: 1;
+  transform: translateX(0); /* Slide in effect on hover */
+}
+
+.navbar ul li:hover {
+  animation: glitter 0.5s forwards;
+}
+
+@keyframes glitter {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
   }
-  
-  .navbar:hover {
-    width: 250px;
+  100% {
+    box-shadow: none;
   }
-  
-  .navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navbar ul li {
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    padding: 1rem 0;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .navbar ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .navbar:hover ul li a {
+}
+
+.glitter-effect {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #ffffff, transparent);
+  border-radius: 50%;
+  animation: fade 0.8s forwards;
+  pointer-events: none;
+}
+
+@keyframes fade {
+  0% {
     opacity: 1;
+    transform: scale(1);
   }
-  
-  .navbar ul li img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
+  100% {
+    opacity: 0;
+    transform: scale(2);
   }
-  
-  .navbar ul li:hover {
-    animation: glitter 0.5s forwards;
-  }
-  
-  @keyframes glitter {
-    0% {
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
-    }
-    100% {
-      box-shadow: none;
-    }
-  }
-  
-  .glitter-effect {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, #e7c254, transparent);
-    border-radius: 50%;
-    animation: fade 0.2s forwards;
-    pointer-events: none;
-  }
-  
-  @keyframes fade {
-    0% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(2);
-    }
-  }
-  
+}
