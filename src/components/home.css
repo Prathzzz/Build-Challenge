@@ -1,0 +1,190 @@
+/* General Layout */
+.home {
+    display: flex;
+    padding-left: 15%;
+    overflow: hidden;
+  }
+  .hero-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+  overflow: hidden;
+  }
+ /* Centered Container Below Text */
+.centered-container {
+    width: 100%; /* Slightly smaller than the parent section */
+    margin: 20px auto; /* Centers the container */
+    padding: 15px 20px;
+    border: 2px solid #0d1024;
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.619); /* Adds a subtle shadow */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .centered-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .centered-container p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .centered-container button {
+    background-color: #215082;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .centered-container button:hover {
+    background-color: #20313f;
+  }
+  
+  .centered-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Feature List Styling */
+  .feature-list {
+    text-align: left;
+    margin-bottom: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+  }
+  
+  
+  .image-slider {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    position: relative;
+    animation: slide 12s infinite; /* Controls the sliding effect */
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    33% {
+      transform: translateX(-100%);
+    }
+    66% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .image-slider:hover {
+    animation-play-state: paused;
+  }
+  
+  .image-slider img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevent shrinking of images */
+  }
+  
+  .hero-section img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .left-section {
+    width: 100%;
+    }
+  
+  .right-section {
+    width: 30%;
+    border: 2px solid #0d1024;
+  }
+  
+  .productivity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;padding: 10px;
+  }
+  .productivity-container .streak:hover {
+    transform: scale(1.02);
+    background-color: #20313f;
+  
+  }
+  .streak {
+    border: 2px solid #0d1024;
+    width: 85%;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .status-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    gap: 10px;
+  }
+  
+  .status-card {
+    border: 2px solid #0d1024;
+    width: 40%;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .status-card .icon {
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .status-card.complete .icon {
+    color: #28a745;
+  }
+  
+  .status-card.failed .icon {
+    color: #dc3545;
+  }
+  
+  .status-card:hover {
+    transform: scale(1.05);
+    background-color: #20313f;
+  }
+  
+  .additional-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    gap: 10px;
+  }
+  
+  .calendar-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;border: 2px solid #0d1024;
+    color: black;text-decoration: none;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.363);
+  }
+  
