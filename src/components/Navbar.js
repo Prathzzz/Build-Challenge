@@ -6,11 +6,11 @@ import "./nav.css";
 //import clickSound from "../assets/sounds/click.mp3";
 
 function Navbar() {
-  //const audioRef = useRef(new Audio(clickSound));
+  const audioRef = useRef(new Audio("pop.mp3"));
 
   const handleClick = (e) => {
     // Play sound on click
-    //audioRef.current.play();
+    audioRef.current.play();
 
     // Add glitter effect dynamically
     const glitter = document.createElement("span");
@@ -47,7 +47,7 @@ function Navbar() {
         </li>
         <li onClick={handleClick}>
           <Link to="/community-resources">
-            <img src="commu.png" alt="Community Resources" />
+            <img src="com.png" alt="Community Resources" />
             <span className="text">Community Resources</span>
           </Link>
         </li>
