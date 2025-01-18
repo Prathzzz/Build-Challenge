@@ -1,0 +1,84 @@
+.navbar {
+    position: fixed;
+    top: 10px;
+    background-color: #c6c2c2;
+    height: 100vh;
+    width: 80px;
+    padding: 0.1rem;
+    transition: width 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .navbar:hover {
+    width: 250px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar ul li {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar:hover ul li a {
+    opacity: 1;
+  }
+  
+  .navbar ul li img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  
+  .navbar ul li:hover {
+    animation: glitter 0.5s forwards;
+  }
+  
+  @keyframes glitter {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+      box-shadow: none;
+    }
+  }
+  
+  .glitter-effect {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #e7c254, transparent);
+    border-radius: 50%;
+    animation: fade 0.2s forwards;
+    pointer-events: none;
+  }
+  
+  @keyframes fade {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+  
