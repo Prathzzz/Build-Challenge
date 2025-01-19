@@ -14,9 +14,9 @@ const Home = () => {
       <div className="left-section">
   <header className="hero-section">
     <div className="image-slider">
-      <img src="ban.jpg" alt="Motivational Background 1" />
-      <img src="ban2.webp" alt="Motivational Background 2" />
-      <img src="ban3.jpg" alt="Motivational Background 3" />
+      <img src="ban4.png" alt="" />
+      <img src="ban5.png" alt="" />
+      <img src="ban6.png" alt="" />
     </div>
     <div className="hero-text" onClick={playSound}>
       <h1>Welcome to New Beginnings</h1>

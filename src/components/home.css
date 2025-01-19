@@ -133,7 +133,7 @@
     }
   
   .right-section {
-    width: 30%;
+    width: 35%;
   border: 2px solid #2d2d2e;
   }
   
@@ -149,7 +149,7 @@
   }
   .streak {
   background-color: #191919;
-    width: 85%;
+    width: 80%;
     padding: 15px;
     border-radius: 8px;
     border: 2px solid #cd4ad4;
@@ -207,9 +207,8 @@
     margin: 0 auto;
     padding: 10px;border: 2px solid #cd4ad4;
     box-shadow: 0px 4px 10px rgba(241, 153, 255, 0.542);
-    
-    color: black;text-decoration: none;
-    background: #ffffff;
+    text-decoration: none;
+    background: transparent;
     border-radius: 10px;
   }
   
