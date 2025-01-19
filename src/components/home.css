@@ -18,9 +18,7 @@
     width: 100%; /* Slightly smaller than the parent section */
     margin: 20px auto; /* Centers the container */
     padding: 15px 20px;
-    border: 2px solid #0d1024;
-    
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.619); /* Adds a subtle shadow */
+  border: 2px solid #2d2d2e;box-shadow: 0 4px 10px rgba(92, 92, 92, 0.387);
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -37,7 +35,7 @@
   }
   
   .centered-container button {
-    background-color: #215082;
+    background-color: #262626;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -48,12 +46,12 @@
   }
   
   .centered-container button:hover {
-    background-color: #20313f;
+    background-color: #151515;
+    box-shadow: 0 4px 10px rgba(92, 92, 92, 0.387);
   }
   
   .centered-container:hover {
-    transform: scale(1.01);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);box-shadow: 0 4px 10px rgba(92, 92, 92, 0.387);
   }
   
   /* Feature List Styling */
@@ -111,7 +109,7 @@
   
   .right-section {
     width: 30%;
-    border: 2px solid #0d1024;
+  border: 2px solid #2d2d2e;
   }
   
   .productivity-container {
@@ -121,16 +119,17 @@
     gap: 20px;padding: 10px;
   }
   .productivity-container .streak:hover {
-    transform: scale(1.02);
-    background-color: #20313f;
+    transform: scale(1.02);background-color: #151515;
   
   }
   .streak {
-    border: 2px solid #0d1024;
+    
+  border: 2px solid #2d2d2e;
+  background-color: #191919;
     width: 85%;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(92, 92, 92, 0.387);
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
@@ -144,12 +143,12 @@
   }
   
   .status-card {
-    border: 2px solid #0d1024;
+    
+  border: 2px solid #2d2d2e;
     width: 40%;
     padding: 15px;
     border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;box-shadow: 0 4px 10px rgba(92, 92, 92, 0.387);
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
@@ -168,7 +167,7 @@
   
   .status-card:hover {
     transform: scale(1.05);
-    background-color: #20313f;
+    background-color: #151515;
   }
   
   .additional-grid {
@@ -181,7 +180,7 @@
   .calendar-container {
     width: 80%;
     margin: 0 auto;
-    padding: 10px;border: 2px solid #0d1024;
+    padding: 10px;border: 2px solid #525252;
     color: black;text-decoration: none;
     background: #ffffff;
     border-radius: 10px;
