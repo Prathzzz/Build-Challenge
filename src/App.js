@@ -10,14 +10,16 @@ import TransformationVisualizer from './components/TransformationVisualizer';
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/habit-tracker" element={<HabitTracker />} />
-        <Route path="/goal-setter" element={<GoalSetter />} />
-        <Route path="/community-resources" element={<CommunityResources />} />
-        <Route path="/transformation-visualizer" element={<TransformationVisualizer />} />
-      </Routes>
+      <div className="app">
+        <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/habit-tracker" element={<HabitTracker />} />
+            <Route path="/goal-setter" element={<GoalSetter />} />
+            <Route path="/community-resources" element={<CommunityResources />} />
+            <Route path="/transformation-visualizer" element={<TransformationVisualizer />} />
+          </Routes>
+      </div>
     </Router>
   );
 }

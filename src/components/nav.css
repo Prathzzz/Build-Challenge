@@ -1,26 +1,27 @@
+/* Navbar styles */
 .navbar {
   position: fixed;
-  top: 0;
+  padding-top: 7%;
   left: 0;
-  background-color: #333;
+  border: 2px solid #2d2d2e;
+  background-color: #191919;
   color: white;
   height: 100vh;
-  width: 50px; /* Initially collapsed */
-  padding: 0.5rem;
+  width: 14%; padding-right: 0.7rem;/* Initially collapsed */
+  padding-left: 0.5rem;
   transition: width 0.3s ease;
   overflow: hidden;
+  z-index: 1000; /* Ensure navbar is above other content */
 }
 
-.navbar:hover {
-  width: 250px; /* Expands on hover */
-}
 .navbar ul {
+  
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.navbar ul li {
+.navbar ul li {width: 100%;
   display: flex;
   align-items: center;
   gap: 1rem; /* Space between icon and text */
@@ -28,6 +29,7 @@
   cursor: pointer;
 }
 
+/* Ensure icons are visible initially */
 .navbar ul li img {
   width: 30px;
   height: 30px;
@@ -36,28 +38,25 @@
   transition: opacity 0.3s ease;
 }
 
+/* Hide text initially, but make it visible on hover */
 .navbar ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   display: flex;
   align-items: center;
-  opacity: 0; /* Initially hidden */
+  opacity: 1; /* Initially hidden */
   white-space: nowrap;
   overflow: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateX(0); /* Slide in animation */
 }
 
-.navbar:hover ul li a {
-  opacity: 1;
-  transform: translateX(0); /* Slide in effect on hover */
-}
-
 .navbar ul li:hover {
   animation: glitter 0.5s forwards;
 }
 
+/* Glitter animation */
 @keyframes glitter {
   0% {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
@@ -65,6 +64,13 @@
   100% {
     box-shadow: none;
   }
+}
+
+/* Page content styles */
+.page-content {
+  margin-left: 80px; /* Adjust for the width of the navbar */
+  padding: 20px; /* Adjust for any margin or padding you need */
+  transition: margin-left 0.3s ease;
 }
 
 .glitter-effect {
