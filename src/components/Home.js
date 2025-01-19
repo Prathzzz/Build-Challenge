@@ -20,11 +20,11 @@ const Home = () => {
     </div>
     <div className="hero-text" onClick={playSound}>
       <h1>Welcome to New Beginnings</h1>
-      <p>Your journey to personal growth and success starts here.</p>
-      {/* New Container */}
+      <p>Track your progress, set goals, and achieve success with our tools.</p>
+        <br />{/* New Container */}
       <div className="centered-container">
+        <b></b>
         <h2>Start Your Journey Today!</h2>
-        <p>Track your progress, set goals, and achieve success with our tools.</p>
         <p>Here's the list of things you can do with New Beginnings:</p>
 
         <div className="feature-list">
