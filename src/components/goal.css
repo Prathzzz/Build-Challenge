@@ -1,0 +1,163 @@
+.goal-setter {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.add-goal-button {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.add-goal-button:hover {
+  background: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.goal-input,
+.goal-category {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.subtasks-section {
+  margin-top: 20px;
+}
+
+.subtask-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-subtask-button {
+  background: #17a2b8;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-subtask-button:hover {
+  background: #138496;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-add-button,
+.modal-cancel-button {
+  flex: 1;
+  padding: 10px;
+  border: 2px #070707;
+  border-radius: 5px;
+  color: rgb(9, 7, 7);
+  cursor: pointer;
+  text-align: center;
+}
+
+.modal-add-button {
+  background-color: #032549;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: white;
+}
+
+.modal-add-button:hover {
+  background: #138496;
+}
+
+.modal-cancel-button {
+  background-color: #d8d3d3;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.modal-cancel-button:hover {
+  background-color: #b0a8a9;
+}
+
+.goal-card {
+  background: #e3f2fd; 
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+}
+
+.goal-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+.goal-card .category {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #1565c0; 
+  font-weight: 500;
+}
+
+.goal-card ul {
+  margin-top: 10px;
+  padding-left: 20px; 
+  list-style-type: disc;
+}
+
+.goal-card ul li {
+  font-size: 0.9rem;
+  color: #0d47a1; 
+  margin-bottom: 5px;
+}
+
