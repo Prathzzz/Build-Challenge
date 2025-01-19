@@ -23,10 +23,10 @@
     margin: 20px auto; /* Centers the container */
     padding: 15px 20px;
     background-color: #000;
-  border: 2px solid #2d2d2e;box-shadow: 0 4px 10px rgba(92, 92, 92, 0.387);
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
+    margin-bottom: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 .centered-container .content{
@@ -38,7 +38,7 @@
     position: absolute;
     inset: 0;
     margin: auto;
-    transform: rotate(-182deg) scaleX(1.02) scaleY(1.02);
+    transform: rotate(-182deg) scaleX(1.01) scaleY(1.01);
     border-radius: 10px;
     background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
     z-index: -10;
@@ -48,7 +48,7 @@
   .centered-container::after{
     content: "";
   z-index: -1;
-  filter: blur(50px);
+  filter: blur(30px);
     transform: rotate(-182deg) scaleX(1.02) scaleY(1.02);
   position: absolute;
   inset: 0;
@@ -57,13 +57,23 @@
   
   }
   .centered-container h2 {
-    opacity: 100%;
-    scale: 0.5;z-index: 2;
-    font-size: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    background: -webkit-linear-gradient(#fc00ff, #00dbde);
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
   }
-  
+  .feature h3{
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(#4ba0dd, #c05a90);
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+  }
   .centered-container p {
+    
     font-size: 1rem;z-index: 2;
     margin-bottom: 15px;
   }
@@ -210,5 +220,16 @@
     text-decoration: none;
     background: transparent;
     border-radius: 10px;
+  }
+  .calendar-container button{
+    padding: 10px;
+    background: linear-gradient(to right, #4d134e, #1f5170);
+    color: #fff;
+    border: 1px solid #000000;
+    border-radius: 1px;
+    padding: 3.7%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
   }
   

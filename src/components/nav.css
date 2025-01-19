@@ -1,23 +1,25 @@
 /* Navbar styles */
 .navbar {
   position: fixed;
-  padding-top: 6%;
   left: 0;
   border: 1px solid #884498;
   box-shadow: 0px 4px 10px rgba(241, 153, 255, 0.542);
-    
   background-color: #191919;
   color: white;
   height: 100vh;
   width: 14%; padding-right: 0.7rem;/* Initially collapsed */
   padding-left: 0.5rem;
-  transition: width 0.3s ease;
+  transition: width 0.9s ease;
   overflow: hidden;
   z-index: 1000; /* Ensure navbar is above other content */
 }
-
+.navbar .logo img{
+  width: 45px;
+  margin-top: 20px;
+  height: 50px;margin-left: 37%;
+  align-items: center;
+}
 .navbar ul {
-  
   list-style: none;
   padding: 0;
   margin: 0;
@@ -37,7 +39,7 @@
   height: 30px;
   object-fit: contain;
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.9s ease;
 }
 
 /* Hide text initially, but make it visible on hover */
@@ -50,21 +52,18 @@
   opacity: 1; /* Initially hidden */
   white-space: nowrap;
   overflow: hidden;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.9s ease, transform 0.9s ease;
   transform: translateX(0); /* Slide in animation */
 }
 
 .navbar ul li:hover {
-  animation: glitter 0.5s forwards;
+  animation: glitter 0.9s forwards;
 }
 
 /* Glitter animation */
 @keyframes glitter {
   0% {
     box-shadow: 0 0 10px rgba(174, 63, 205, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
-  }
-  100% {
-    box-shadow: none;
   }
 }
 
