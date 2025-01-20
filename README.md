@@ -14,6 +14,8 @@ Track and manage your daily habits to stay on top of your personal goals. Set ha
 ### 2. Goal Setter
 Set and monitor your long-term and short-term goals. Break them down into actionable steps and check off progress as you go.
 
+![](page6.jpg)
+
 ### 3. Pomodoro Timer
 A simple, focused timer based on the Pomodoro Technique, which helps you work in intervals with short breaks in between. You can start, pause, or reset the timer and keep track of completed sessions.
 
