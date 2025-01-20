@@ -2,9 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
+## Demo
+![Demo](React App - Chromium 2025-01-20 13-05-16 (online-video-cutter.com).mp4)
 
 ### `npm start`
 
