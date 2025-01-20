@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState , createContext} from "react";
 import "./habit.css";
-
-const HabitTracker = () => {
+export const HabitContext =createContext();
+const HabitTracker = ({children}) => {
   const add = () => {
     const audio = new Audio("add.mp3");
     audio.play();
@@ -101,7 +101,9 @@ const HabitTracker = () => {
   );
 
   return (
-    <div className="habit-tracker">
+    <HabitContext.Provider value={{completedHabits, activeHabits }}>
+      {children}
+      <div className="habit-tracker">
       <h1>Habit Tracker</h1>
       <div className="centered">
         <b></b>
@@ -208,6 +210,7 @@ const HabitTracker = () => {
         ))}
       </div>
     </div>
+    </HabitContext.Provider>
   );
 };
 

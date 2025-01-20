@@ -11,6 +11,11 @@
     margin-bottom: 30px;
   }
   
+  .chart-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
   
   /* Styling for the chart itself */
   .chart-container canvas {

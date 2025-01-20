@@ -5,7 +5,10 @@ function GoalSetter() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [goals, setGoals] = useState([]);
   const [completedGoals, setCompletedGoals] = useState([]);
-
+  const add = () => {
+    const audio = new Audio("add (2).mp3");
+    audio.play();
+  };
   const addGoal = (goal) => {
     setGoals([...goals, goal]);
   };
@@ -14,9 +17,16 @@ function GoalSetter() {
     setIsModalOpen(false);
   };
 
-  const markGoalAsCompleted = (goal) => {
-    setGoals(goals.filter((g) => g !== goal));
-    setCompletedGoals([...completedGoals, goal]);
+  const markGoalAsCompleted = (goal, isCompleted) => {
+    if (isCompleted) {
+      // Move from Active to Completed
+      setGoals(goals.filter((g) => g !== goal));
+      setCompletedGoals([...completedGoals, goal]);
+    } else {
+      // Move from Completed to Active
+      setCompletedGoals(completedGoals.filter((g) => g !== goal));
+      setGoals([...goals, goal]);
+    }
   };
 
   return (
@@ -34,21 +44,34 @@ function GoalSetter() {
 
       <div className="goal-list">
         <h3>Active Goals</h3>
-        {goals.map((goal, index) => (
-          <GoalCard
-            key={index}
-            goal={goal}
-            onMarkCompleted={markGoalAsCompleted}
-            isCompleted={false}
-          />
-        ))}
+        {goals.length === 0 ? (
+          <p>No active goals</p>
+        ) : (
+          goals.map((goal, index) => (
+            <GoalCard
+              key={index}
+              goal={goal}
+              onMarkCompleted={markGoalAsCompleted}
+              isCompleted={false}
+            />
+          ))
+        )}
       </div>
 
       <div className="goal-list">
         <h3>Completed Goals</h3>
-        {completedGoals.map((goal, index) => (
-          <GoalCard key={index} goal={goal} isCompleted={true} />
-        ))}
+        {completedGoals.length === 0 ? (
+          <p>No completed goals</p>
+        ) : (
+          completedGoals.map((goal, index) => (
+            <GoalCard
+              key={index}
+              goal={goal}
+              onMarkCompleted={markGoalAsCompleted}
+              isCompleted={true}
+            />
+          ))
+        )}
       </div>
     </div>
   );
@@ -66,7 +89,10 @@ function GoalModal({ onClose, onAddGoal }) {
     updated[index] = value;
     setSubtasks(updated);
   };
-
+  const add = () => {
+    const audio = new Audio("add (2).mp3");
+    audio.play();
+  };
   const handleAddGoal = () => {
     if (goal && category) {
       onAddGoal({ goal, category, subtasks });
@@ -108,13 +134,13 @@ function GoalModal({ onClose, onAddGoal }) {
               placeholder={`Subtask ${index + 1}`}
               onChange={(e) => updateSubtask(index, e.target.value)}
             />
-          ))}
-          <button className="add-subtask-button" onClick={addSubtask}>
+          ))}<button className="add-subtask-button" onClick={() => { add(); addSubtask(); }}>
+
             + Add Subtask
           </button>
         </div>
         <div className="modal-buttons">
-          <button className="modal-add-button" onClick={handleAddGoal}>
+          <button className="modal-add-button" onClick={() => { add(); handleAddGoal();}}>
             Add Goal
           </button>
           <button className="modal-cancel-button" onClick={onClose}>
@@ -148,7 +174,7 @@ function GoalCard({ goal, onMarkCompleted, isCompleted }) {
           type="checkbox"
           id={`goal-${goal.goal}`}
           name={`goal-${goal.goal}`}
-          onChange={() => onMarkCompleted(goal)}
+          onChange={(e) => onMarkCompleted(goal, e.target.checked)}
           checked={isCompleted}
           className="custom-checkbox"
         />
@@ -164,12 +190,12 @@ function GoalCard({ goal, onMarkCompleted, isCompleted }) {
             <div key={index} className="subtask-item">
               <input
                 type="checkbox"
-                id={`subtask-${index}`}
+                id={`subtask-${goal.goal}-${index}`}
                 checked={completedSubtasks[index]}
                 onChange={() => toggleSubtaskCompletion(index)}
                 className="custom-checkbox"
               />
-              <label htmlFor={`subtask-${index}`} className="checkbox-label" />
+              <label htmlFor={`subtask-${goal.goal}-${index}`} className="checkbox-label" />
               <span
                 className={`subtask-text ${
                   completedSubtasks[index] ? "strikethrough" : ""
@@ -184,7 +210,6 @@ function GoalCard({ goal, onMarkCompleted, isCompleted }) {
     </div>
   );
 }
-
 
 
 export default GoalSetter;
