@@ -1,0 +1,184 @@
+/* Container Styles */
+.community-container {
+    padding: 20px;
+    color: white;
+    }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  /* Posts Section */
+  .posts-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .post-card {
+    border: 1px solid #464646;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 1px 4px 6px rgba(178, 44, 190, 0.43);
+  }
+  
+  .post-username {
+    font-size: 14px;
+    color: #007bff;
+    margin-bottom: 5px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-weight: bold;
+  }
+  
+  .post-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+    position: relative;
+  }
+  .toggle-conversation-btn{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .post-caption {
+    flex-direction: column;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  /* Like and Share */
+  .like-share {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .like-btn,
+  .share-btn {
+    
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .like-btn:hover,
+  .share-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Floating Add Post Button */
+  .add-post-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    font-size: 34px;
+    border: none;
+    cursor: pointer;
+  }
+  .add-comment-section{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  .add-comment-section input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  .add-comment-section button{
+    background-color: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .add-post-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modal Styling */
+  .post-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .modal-content {
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    background-color: #1414149c;
+    max-width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .new-post-caption,
+  .new-post-image {
+    width: 100%;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #141414;
+    border: 1px solid #adadad;
+  }
+  
+  .new-post-caption:focus,
+  .new-post-image:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .post-submit-btn,
+  .close-modal-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .post-submit-btn:hover,
+  .close-modal-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .close-modal-btn {
+    background-color: #dc3545;
+  }
+  
+  .close-modal-btn:hover {
+    background-color: #c82333;
+  }
+  

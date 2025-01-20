@@ -14,17 +14,17 @@ const Home = () => {
       <div className="left-section">
   <header className="hero-section">
     <div className="image-slider">
-      <img src="ban.jpg" alt="Motivational Background 1" />
-      <img src="ban2.webp" alt="Motivational Background 2" />
-      <img src="ban3.jpg" alt="Motivational Background 3" />
+      <img src="ban4.png" alt="" />
+      <img src="ban5.png" alt="" />
+      <img src="ban6.png" alt="" />
     </div>
     <div className="hero-text" onClick={playSound}>
       <h1>Welcome to New Beginnings</h1>
-      <p>Your journey to personal growth and success starts here.</p>
-      {/* New Container */}
+      <p>Track your progress, set goals, and achieve success with our tools.</p>
+        <br />{/* New Container */}
       <div className="centered-container">
+        <b></b>
         <h2>Start Your Journey Today!</h2>
-        <p>Track your progress, set goals, and achieve success with our tools.</p>
         <p>Here's the list of things you can do with New Beginnings:</p>
 
         <div className="feature-list">

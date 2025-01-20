@@ -23,6 +23,8 @@ function Navbar() {
 
   return (
     <nav className="navbar">
+      <div className="logo"><img src="icon.png" alt="" /></div>
+      
       <ul>
         <li onClick={handleClick}>
           <Link to="/">
