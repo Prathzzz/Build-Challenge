@@ -13,7 +13,7 @@ function Pomodoro() {
     "Long Break": 15 * 60,
   };
 
-  
+  // Ensure startSession is included as a dependency for useCallback
   const handleSessionEnd = useCallback(() => {
     if (currentSession === "Pomodoro") {
       setPomodoroCount((prev) => prev + 1);
@@ -25,7 +25,7 @@ function Pomodoro() {
     } else {
       startSession("Pomodoro");
     }
-  }, [currentSession, pomodoroCount]);
+  }, [currentSession, pomodoroCount, startSession]); // Added startSession to dependencies
 
   const startSession = (session) => {
     setCurrentSession(session);
