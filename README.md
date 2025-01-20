@@ -3,7 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
-![Demo](React App - Chromium 2025-01-20 13-05-16 (online-video-cutter.com).mp4)
+[Download/View Video](https://github.com/Prathzzz/Build-Challenge/blob/main/React%20App%20-%20Chromium%202025-01-20%2013-05-16%20(online-video-cutter.com).mp4)
+
 
 ### `npm start`
 
