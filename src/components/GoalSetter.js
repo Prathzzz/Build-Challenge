@@ -5,10 +5,7 @@ function GoalSetter() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [goals, setGoals] = useState([]);
   const [completedGoals, setCompletedGoals] = useState([]);
-  const add = () => {
-    const audio = new Audio("add (2).mp3");
-    audio.play();
-  };
+  
   const addGoal = (goal) => {
     setGoals([...goals, goal]);
   };

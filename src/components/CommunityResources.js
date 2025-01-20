@@ -98,18 +98,7 @@ const CommunityResources = () => {
     });
     setPosts(updatedPosts);
   };
-  const comment = (postId) => {
-    const updatedPosts = posts.map((post) => {
-      if (post._id === postId) {
-        return {
-          ...post,
-          comments: post.comments + 1,
-        };
-      }
-      return post;
-    });
-    setPosts(updatedPosts);
-  };
+  
   const handlePostSubmit = () => {
     if (!newPostImage || !newPostCaption.trim()) return;
 
