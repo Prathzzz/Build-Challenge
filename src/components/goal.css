@@ -5,6 +5,35 @@
   text-align: center;
 }
 
+.heading-card {
+  background: #f3e5f5;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(204, 134, 202, 0.867);
+  margin-bottom: 20px;
+  width: 100%;
+  height: 60%;
+}
+
+.heading-card .tagline {
+  background-color: #0056b3;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.heading-card h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a148c;
+}
+
+
 .add-goal-button {
   background: #f9f9f9;
   padding: 15px;
@@ -129,9 +158,10 @@
   border-radius: 8px;
   padding: 15px;
   margin: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(204, 134, 202, 0.867);
   text-align: left;
   font-family: 'Arial', sans-serif;
+  width: 101%;
 }
 
 .goal-card h3 {
@@ -161,3 +191,95 @@
   margin-bottom: 5px;
 }
 
+.goal-actions {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border: 2px solid #0d47a1;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  background-color: #0d47a1;
+  border-color: #0d47a1;
+}
+
+.custom-checkbox:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 3px;
+}
+
+
+.goal-card.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.goal-card h3 {
+  display: inline;
+  margin-left: 10px;
+}
+
+.modal {
+  z-index: 1000; /* Ensures the modal stays on top */
+}
+
+.goal-setter .goal-list {
+  margin-top: 20px; /* Adds space between the modal and goals */
+  position: relative;
+  z-index: 1;
+}
+
+.category-button {
+  background-color: #1565c0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.category-button:hover {
+  background-color: #0d47a1;
+}
+
+.subtasks-list {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.subtask-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.subtask-text {
+  margin-left: 10px;
+  font-size: 0.9rem;
+  color: #0d47a1;
+}
+
+.subtask-text.strikethrough {
+  text-decoration: line-through;
+  color: #6c757d;
+}

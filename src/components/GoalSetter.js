@@ -4,6 +4,7 @@ import "./goal.css";
 function GoalSetter() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [goals, setGoals] = useState([]);
+  const [completedGoals, setCompletedGoals] = useState([]);
 
   const addGoal = (goal) => {
     setGoals([...goals, goal]);
@@ -13,10 +14,17 @@ function GoalSetter() {
     setIsModalOpen(false);
   };
 
+  const markGoalAsCompleted = (goal) => {
+    setGoals(goals.filter((g) => g !== goal));
+    setCompletedGoals([...completedGoals, goal]);
+  };
+
   return (
     <div className="goal-setter">
-      <h2>Goal Setter</h2>
-      <p>Define and achieve your goals effectively.</p>
+      <div className="heading-card">
+        <p className="tagline">Goal Setter</p>
+        <h1>Turn Your Goals Into Reality, One Step at a Time.</h1>
+      </div>
 
       <button className="add-goal-button" onClick={() => setIsModalOpen(true)}>
         + Add Goal
@@ -25,8 +33,21 @@ function GoalSetter() {
       {isModalOpen && <GoalModal onClose={closeModal} onAddGoal={addGoal} />}
 
       <div className="goal-list">
+        <h3>Active Goals</h3>
         {goals.map((goal, index) => (
-          <GoalCard key={index} goal={goal} />
+          <GoalCard
+            key={index}
+            goal={goal}
+            onMarkCompleted={markGoalAsCompleted}
+            isCompleted={false}
+          />
+        ))}
+      </div>
+
+      <div className="goal-list">
+        <h3>Completed Goals</h3>
+        {completedGoals.map((goal, index) => (
+          <GoalCard key={index} goal={goal} isCompleted={true} />
         ))}
       </div>
     </div>
@@ -105,20 +126,65 @@ function GoalModal({ onClose, onAddGoal }) {
   );
 }
 
-function GoalCard({ goal }) {
+function GoalCard({ goal, onMarkCompleted, isCompleted }) {
+  const [completedSubtasks, setCompletedSubtasks] = useState(
+    new Array(goal.subtasks.length).fill(false)
+  );
+
+  const toggleSubtaskCompletion = (index) => {
+    const updated = [...completedSubtasks];
+    updated[index] = !updated[index];
+    setCompletedSubtasks(updated);
+  };
+
   return (
-    <div className={`goal-card ${goal.category.toLowerCase()}`}>
-      <h3>{goal.goal}</h3>
-      <span className="category">{goal.category}</span>
+    <div
+      className={`goal-card ${goal.category.toLowerCase()} ${
+        isCompleted ? "completed" : ""
+      }`}
+    >
+      <div className="goal-actions">
+        <input
+          type="checkbox"
+          id={`goal-${goal.goal}`}
+          name={`goal-${goal.goal}`}
+          onChange={() => onMarkCompleted(goal)}
+          checked={isCompleted}
+          className="custom-checkbox"
+        />
+        <label htmlFor={`goal-${goal.goal}`} className="checkbox-label" />
+      </div>
+      <h3>
+        {goal.goal}
+        <button className="category-button">{goal.category}</button>
+      </h3>
       {goal.subtasks.length > 0 && (
-        <ul>
+        <div className="subtasks-list">
           {goal.subtasks.map((task, index) => (
-            <li key={index}>{task}</li>
+            <div key={index} className="subtask-item">
+              <input
+                type="checkbox"
+                id={`subtask-${index}`}
+                checked={completedSubtasks[index]}
+                onChange={() => toggleSubtaskCompletion(index)}
+                className="custom-checkbox"
+              />
+              <label htmlFor={`subtask-${index}`} className="checkbox-label" />
+              <span
+                className={`subtask-text ${
+                  completedSubtasks[index] ? "strikethrough" : ""
+                }`}
+              >
+                {task}
+              </span>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
 }
+
+
 
 export default GoalSetter;
