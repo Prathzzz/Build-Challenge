@@ -5,7 +5,7 @@ import Home from './components/Home';
 import HabitTracker from './components/HabitTracker';
 import GoalSetter from './components/GoalSetter';
 import CommunityResources from './components/CommunityResources';
-import TransformationVisualizer from './components/TransformationVisualizer';
+import Pomodoro from './components/pomodoro';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
             <Route path="/habit-tracker" element={<HabitTracker />} />
             <Route path="/goal-setter" element={<GoalSetter />} />
             <Route path="/community-resources" element={<CommunityResources />} />
-            <Route path="/transformation-visualizer" element={<TransformationVisualizer />} />
+            <Route path="/pomodoro" element={<Pomodoro />} />
           </Routes>
       </div>
     </Router>
