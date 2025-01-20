@@ -39,6 +39,7 @@
   height: 30px;
   object-fit: contain;
   opacity: 1;
+  padding-right: 10px;
   transition: opacity 0.9s ease;
 }
 

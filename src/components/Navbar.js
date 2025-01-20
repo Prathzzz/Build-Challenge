@@ -52,8 +52,14 @@ function Navbar() {
         </li>
         <li onClick={handleClick}>
           <Link to="/pomodoro">
-            <img src="graph.webp" alt="Pomodoro" />
-            <span className="text">Pomodoro</span>
+            <img src="pomo.webp" alt="Pomodoro" />
+            <span className="text"> Pomodoro</span>
+          </Link>
+        </li>
+        <li onClick={handleClick}>
+          <Link to="/visualizer">
+            <img src="graph.webp" alt="" />
+            <span className="text">Visualizer</span>
           </Link>
         </li>
       </ul>

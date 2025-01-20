@@ -3,10 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 100vh;
+    text-align: center;padding-left: 8%;
+    height: 100vh;width: 200vh;
     background-color: #191919;
-    font-family: Arial, sans-serif;
     vertical-align: middle;
   }
   
@@ -17,10 +16,10 @@
   }
   
   .timer-display {
-    background-color: #fff;
+    background-color: #2e2e2e35;
     padding: 2rem 3rem; /* Increased padding for card effect */
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for card effect */
+    box-shadow: 2px 4px 6px rgba(157, 31, 161, 0.492); /* Soft shadow for card effect */
     margin-bottom: 2rem;
     width: 300px; /* Fixed width for the card */
   }
@@ -28,13 +27,11 @@
   .timer-display h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #555;
   }
   
   .time-left {
     font-size: 3rem;
     font-weight: bold;
-    color: #222;
   }
   
   .controls {
@@ -47,17 +44,13 @@
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
+    color: #fff;background: linear-gradient(to right, #963897, #3d7ea5);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
-  .control-button:hover {
-    background-color: #0056b3;
-  }
   
   .pomodoro-count {
     font-size: 1rem;

@@ -151,14 +151,7 @@ const CommunityResources = () => {
 
             {/* Like and Share */}
             <div className="like-share">
-            <button
-              onClick={() =>
-                setActivePost(activePost === post._id ? null : post._id)
-              }
-              className="toggle-conversation-btn"
-            >
-              {activePost === post._id ? "Hide Conversation" : "💬 (4)"} 
-            </button>
+            
             <button
   onClick={() => {
     like(); // Play the like sound
@@ -168,13 +161,21 @@ const CommunityResources = () => {
 >
   ❤ ({post.likes})
 </button>
+
               <button
                 onClick={() => handleShare(post._id)}
                 className="share-btn"
               >
                 ➤ ({post.shares})
               </button>
-              
+              <button
+              onClick={() =>
+                setActivePost(activePost === post._id ? null : post._id)
+              }
+              className="toggle-conversation-btn"
+            >
+              {activePost === post._id ? "Hide Conversation" : "💬"} 
+            </button>
             </div>
 
             {/* Show conversation */}
